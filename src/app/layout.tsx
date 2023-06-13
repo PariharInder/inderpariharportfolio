@@ -1,4 +1,7 @@
 'use client'
+import Footer from '@/components/Footer'
+import NavBar from '@/components/NavBar'
+import SocialMediaButtons from '@/components/SocialMediaButtons'
 import Splashscreen from '@/components/Splashscreen'
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
@@ -90,7 +93,10 @@ export default function RootLayout({
             <Splashscreen finishLoading={() => setIsLoading(false)} />
           ) : (
             <div>
+              <NavBar />
               {children}
+              <SocialMediaButtons />
+              <Footer />
             </div>
           )
           }

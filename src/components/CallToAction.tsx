@@ -8,9 +8,9 @@ interface CallToActionProps {
 
 const CallToAction: FC<CallToActionProps> = ({}) => {
   return (
-    <div className='mt-5'>
-        <Link href={'/projects'} className={buttonVariants({variant: 'primary'})}>Check out my work.</Link>
-        <Link href={'/about'} className={buttonVariants({variant: 'secondary'})}>Get to know me.</Link>
+    <div className='mt-5 flex justify-center items-center md:justify-start'>
+        <Link href={'/projects'} className={buttonVariants({variant: 'primary', size: 'lg'})}>Check out my work.</Link>
+        <Link href={'/about'} className={buttonVariants({variant: 'secondary', size: 'lg'})}>Get to know me.</Link>
     </div>
   )
 }
