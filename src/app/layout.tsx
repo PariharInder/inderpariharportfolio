@@ -85,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={cn(" text-slate-900 antialiased z-1", inter.className)}>
+        <div className={cn(" bg-black", inter.className)}>
           {isLoading && isHome ? (
             <Splashscreen finishLoading={() => setIsLoading(false)} />
           ) : (
