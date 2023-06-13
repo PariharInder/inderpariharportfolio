@@ -7,75 +7,44 @@ interface SplashscreenProps {
 }
 
 const Splashscreen: FC<SplashscreenProps> = ({ finishLoading }) => {
-  const loaderRef = useRef<HTMLDivElement>(null)
-  const logoRef = useRef<HTMLSpanElement>(null)
-  const waitRef = useRef<HTMLSpanElement>(null)
+  const phrasesRef = useRef<HTMLUListElement>(null)
+
 
   useEffect(() => {
-    const animateLoader = () => {
-      const loader = anime.timeline({
-        complete: finishLoading,
+    const phrases = phrasesRef.current?.querySelectorAll('li')
+
+    if (phrases) {
+      phrases.forEach((phrase, index) => {
+        anime({
+          targets: phrase,
+          opacity: [0, 1], // Fade in animation
+          translateY: [20, 0], // Move down animation
+          delay: 500 * index, // Delay for each phrase
+          duration: 1000, // Animation duration
+          complete: () => {
+            setTimeout(() => {
+              anime({
+                targets: phrase,
+                opacity: [1, 0], // Fade out animation
+                translateY: [0, -20], // Move up animation
+                duration: 1000, // Animation duration
+                complete: index === phrases.length - 1 ? finishLoading : undefined // Call the finishLoading function when animations complete for the last phrase
+              })
+            }, 2000) // Delay before each phrase disappears
+          },
+        })
       })
-
-      loader.add({
-        targets: loaderRef.current,
-        rotate: '90deg',
-        duration: 4000,
-        easing: 'easeInOutCirc',
-        loop: true,
-      })
     }
-
-    const animateLogo = () => {
-      anime.timeline()
-        .add({
-          targets: logoRef.current,
-          opacity: [0, 1],
-          translateY: ['-20px', '0'],
-          easing: 'easeOutCirc',
-          duration: 1500,
-        })
-        .add({
-          targets: logoRef.current,
-          opacity: 1,
-          translateY: '0',
-          easing: 'linear',
-          duration: 1000,
-        })
-    }
-
-    const animateWaitText = () => {
-      anime.timeline()
-        .add({
-          targets: waitRef.current,
-          opacity: [0, 1],
-          translateX: ['-20px', '0'],
-          easing: 'easeOutCirc',
-          duration: 1500,
-        })
-        .add({
-          targets: waitRef.current,
-          opacity: 1,
-          translateX: '0',
-          easing: 'linear',
-          duration: 1000,
-        })
-    }
-
-    animateLoader()
-    animateLogo()
-    animateWaitText()
   }, [finishLoading])
 
   return (
-    <div className='flex flex-col h-screen items-center justify-center bg-neutral-700/60'>
-      <div ref={loaderRef} className='w-12 h-12 border-4 border-dashed border-white-200 rounded-full animate-spin'></div>
-      <span id="logo" ref={logoRef} className='text-4xl mt-10 text-white font-extrabold'>
-        <span className="fade-in">inder</span><span className="fade-in">parihar.ca</span>
-      </span>
-      <span className='text-white text-xl underline' ref={waitRef} id="wait">
-        Please wait while the page loads...
-      </span>
+    <div className='flex flex-col h-screen items-center justify-center bg-black text-white font-light font-sans'>
+      <ul ref={phrasesRef} className='flex flex-col text-center py-10 text-2xl md:text-3xl list-none'>
+      <li>Experience Excellence:</li>
+      <li>Ignite Innovation, Optimize Processes,</li>
+      <li>Drive Efficiency.</li>
+      </ul>
+      <span>©inderparihar.ca</span>
     </div>
   )
 }

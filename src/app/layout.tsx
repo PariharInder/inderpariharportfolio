@@ -2,7 +2,6 @@
 import Splashscreen from '@/components/Splashscreen'
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
-import css from '@/styles/home.module.css'
 import { Inter } from 'next/font/google'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -85,7 +84,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={css.bg}>
+      <body>
         <div className={cn(" text-slate-900 antialiased z-1", inter.className)}>
           {isLoading && isHome ? (
             <Splashscreen finishLoading={() => setIsLoading(false)} />
