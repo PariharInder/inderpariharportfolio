@@ -25,7 +25,8 @@
       "@/lib/*": ["./src/lib/*"],
       "@/types/*": ["./src/types/*"],
       "@/components/*": ["./src/components/*"],
-      "@/ui/*": ["./src/components/ui/*"]
+      "@/ui/*": ["./src/components/ui/*"],
+      "@/assets/*": ["./src/assets/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
