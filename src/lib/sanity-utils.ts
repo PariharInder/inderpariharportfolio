@@ -13,3 +13,13 @@ export const getProfile = () => {
     }[0]
   `)
 }
+
+export const getSkills = () => {
+  return client.fetch(groq`
+    *[_type == "skills"]{
+      _id,
+      name,
+      skills
+    }
+  `)
+}
