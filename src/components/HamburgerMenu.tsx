@@ -15,7 +15,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({}) => {
     <div className='relative flex flex-col'>
       <Menu
         className='text-white absolute top-0 right-0 m-4 cursor-pointer'
-        size={32}
+        size={28}
         onClick={toggleDropdown}
       />
       {isDropdownOpen && (

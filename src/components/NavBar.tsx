@@ -8,8 +8,9 @@ interface NavBarProps {
 
 const NavBar: FC<NavBarProps> = ({ }) => {
     return (
-        <div>
-            <div className="hidden md:flex fixed top-5 right-0 z-2 text-xl text-white w-1/3 items-center justify-evenly font-sans">
+        <div className='flex items-center justify-end'>
+            <div className="hidden md:flex z-2 text-xl text-white w-1/2 h-20 items-center justify-evenly font-sans">
+                <Link href={'/'}>Home</Link>
                 <Link href={'/projects'}>Projects</Link>
                 <Link href={'/about'}>About</Link>
                 <Link href={'/contact'}>Contact</Link>

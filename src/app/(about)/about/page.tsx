@@ -1,11 +1,9 @@
-import { headingVariants } from "@/components/ui/Headings";
+import About from "@/components/About";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-screen justify-center">
-      <span className={headingVariants({ variant: 'headingOrangeSecondary', size: 'lg' })}>
-        A little about me
-      </span>
+    <main className="flex flex-col h-max md:h-screen justify-start md:pt-10 px-5 md:px-20 text-white">
+        <About />
     </main>
   )
 }
