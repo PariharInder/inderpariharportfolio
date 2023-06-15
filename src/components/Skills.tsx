@@ -20,9 +20,9 @@ const Skills: FC<SkillsProps> = async ({ }) => {
     <th className="border-b border-r border-white p-2">Category</th>
     <th className="border-b border-white  p-2">Skills</th>
   </tr>
-  {skills.map((skill: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; skills: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined }) => {
+  {skills.map((skill: { name: string | number | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; skills: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined }) => {
     return (
-      <tr><td className="border-b border-r border-white p-2">{skill.name}</td>
+      <tr key={1}><td className="border-b border-r border-white p-2">{skill.name}</td>
       <td className="border-b border-white  p-2">{skill.skills}</td>
       </tr>
     )
