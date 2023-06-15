@@ -15,8 +15,9 @@ export const buttonVariants = cva(
       },
       size: {
         default: 'h-10 py-2 px-4',
-        sm: 'h-9 px-2',
+        sm: 'h-9 px-2 rounded-md',
         lg: 'md:h-11 md:px-8 h-10 py-2 px-4',
+        submit: 'h-10 py-2 px-4 w-20'
       },
     },
     defaultVariants: {

@@ -3,12 +3,13 @@ import { cva, VariantProps } from 'class-variance-authority'
 import { FC, forwardRef } from 'react'
 
 export const inputVariants = cva(
-  'px-2 bg-stone-950 rounded-xl',
+  'px-2 bg-stone-950 rounded-xl w-5/6 md:w-4/6',
   {
     variants: {
       variant: {
         text:
-          'text-white'
+          'text-white my-2',
+        textarea: 'h-60 my-2'
       },
       size: {
         default: 'h-10 py-2 px-4'

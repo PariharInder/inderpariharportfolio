@@ -12,7 +12,7 @@ interface AboutProps {
 const About: FC<AboutProps> = async ({ }) => {
   const profile = await getProfile()
 
-  return <div className='flex flex-col'>
+  return <div className='flex flex-col items-center md:items-start'>
     <span className='py-7 md:py-10'><span className={headingVariants({ variant: 'headingTealPrimary', size: 'default' })}>
       A little about me
     </span></span>
