@@ -4,7 +4,7 @@ import { ButtonHTMLAttributes, FC, forwardRef } from 'react'
 import { Loader2 } from 'lucide-react'
 
 export const buttonVariants = cva(
-  'active:scale-95 inline-flex items-center justify-center rounded-2xl font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:drop-shadow-lg disabled:opacity-50 disabled:pointer-events-none my-2',
+  'active:scale-95 inline-flex items-center justify-center rounded-2xl font-medium hover:cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:drop-shadow-lg disabled:opacity-50 disabled:pointer-events-none my-2',
   {
     variants: {
       variant: {
@@ -12,6 +12,8 @@ export const buttonVariants = cva(
           'bg-gradient-to-r from-teal-500 to-purple-500 text-white hover:bg-teal-500',
           secondary:
           'bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 text-white hover:bg-yellow-300',
+          ghost:
+          'bg-gradient-to-r from-stone-950 to-gray-900 text-white'
       },
       size: {
         default: 'h-10 py-2 px-4',

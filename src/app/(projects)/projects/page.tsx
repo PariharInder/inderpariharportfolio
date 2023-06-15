@@ -1,10 +1,11 @@
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import ProjectsCatalogue from "@/components/ProjectsCatalogue"
+import ProjectsSection from "@/components/ProjectsSection"
 
 export default function Home() {
     return (
-      <div className="flex flex-col h-screen md:-mt-20 justify-center text-white">
-        <Projects />
+      <div className="flex flex-col h-max justify-start md:pt-10 px-5 md:px-20 text-white">
+        <ProjectsSection />
+        <ProjectsCatalogue />
       </div>
     )
   }

@@ -23,3 +23,21 @@ export const getSkills = () => {
     }
   `)
 }
+
+export const getProjects = () => {
+  return client.fetch(groq`
+  *[_type == 'project'] {
+    _id,
+    name,
+    slug,
+    "images": images[] {
+      "url": asset->url,
+      alt
+    },
+    url,
+    techStack,
+    github,
+    content
+  }
+  `)
+}
