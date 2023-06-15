@@ -1,3 +1,4 @@
+'use client'
 import { FC } from 'react'
 import GitHubButton from './ui/GitHubButton'
 import LinkedInButton from './ui/LinkedInButton'

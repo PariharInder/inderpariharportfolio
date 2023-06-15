@@ -1,3 +1,4 @@
+'use client'
 import { FC, JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal } from 'react'
 import { headingVariants } from './ui/Headings'
 import { getSkills } from '@/lib/sanity-utils'
