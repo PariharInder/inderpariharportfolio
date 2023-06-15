@@ -61,7 +61,7 @@ const ContactForm: FC<ContactFormProps> = ({ }) => {
           <Button type="submit" variant={'primary'} size={'submit'} isLoading={isLoading}>Submit</Button>
         </form>
       </div>
-      <p className='py-2 font-light'>OR reach out to me using the following or my socials</p>
+      <p className='py-2 font-light text-center'>OR reach out to me using the following or my socials</p>
       <div className='flex flex-col font-thin items-center'>
         <Link href={'tel:+1234567890'} className='flex py-2'><Phone className='mx-2' /> +1 (705)-905-5691</Link>
         <Link href={'mail:2002inderjitsingh@gmail.com'} className='flex py-2'><Mail className='mx-2' /> 2002inderjitsingh@gmail.com</Link>
