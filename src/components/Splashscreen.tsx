@@ -40,9 +40,9 @@ const Splashscreen: FC<SplashscreenProps> = ({ finishLoading }) => {
   return (
     <div className='flex flex-col h-screen items-center justify-center bg-black text-white font-light font-sans'>
       <ul ref={phrasesRef} className='flex flex-col text-center py-10 text-2xl md:text-3xl list-none'>
-        <li>Experience Excellence:</li>
-        <li>Ignite Innovation, Optimize Processes,</li>
-        <li>Drive Efficiency.</li>
+        <li>Turning</li>
+        <li>ideas into elegant</li>
+        <li>solutions.</li>
       </ul>
       <span>©inderparihar.ca</span>
     </div>
