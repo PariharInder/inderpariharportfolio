@@ -45,7 +45,7 @@ const ContactForm: FC<ContactFormProps> = ({ }) => {
     <div className='flex flex-col items-center mt-10 md:mt-1'>
       <div>
         <span className='py-7 md:py-10'><span className={headingVariants({ variant: 'headingTealPrimary', size: 'default' })}>
-          Let's connect
+          Let&apos;s connect
         </span></span>
       </div>
       <div>
