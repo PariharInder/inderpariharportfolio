@@ -35,7 +35,7 @@ const ProjectTile: FC<ProjectTileProps> = ({data}) => {
     <ImageSlider images={data.images} />
     <div className='flex flex-wrap items-center justify-between'>
         {data.techStack.map((skill: string) => {
-            return <p className={buttonVariants({variant: 'ghost'})}>{skill}</p>
+            return <p className={buttonVariants({variant: 'ghost'})} key={'skill'}>{skill}</p>
         })}
     </div>
 
