@@ -31,6 +31,7 @@ const About: FC<AboutProps> = async ({ }) => {
     </div>
 
     <div className='flex md:hidden flex-col justify-center items-center'>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={profile.profilePhoto} alt="inder-parihar profile photo" className='w-60 h-60 rounded-full object-cover' />
       <div className='pt-4 flex flex-col h-auto font-thin'>
         {profile.about.map((block: { _key: Key | null | undefined; children: any[] }) => (
