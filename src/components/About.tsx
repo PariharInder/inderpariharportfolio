@@ -26,6 +26,7 @@ const About: FC<AboutProps> = async ({ }) => {
           </p>
         ))}
       </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={profile.profilePhoto} alt="inder-parihar profile photo" className='w-80 h-80 rounded-full object-cover' />
     </div>
 

@@ -12,6 +12,7 @@ const ImageSlider: FC<ImageSliderProps> = ({images}) => {
     <Carousel>
         {images.map((image: any) => (
         <div key={image.url} className='mt-2'>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={image.url} alt={image.alt} />
         </div>
     ))}
