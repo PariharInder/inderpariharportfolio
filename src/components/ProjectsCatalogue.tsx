@@ -12,7 +12,7 @@ const ProjectsCatalogue: FC<ProjectsCatalogueProps> = async ({}) => {
   return (
     <div>
         {projects.map((project:any) => {
-            return <ProjectTile data={project}/>
+            return <ProjectTile data={project} key={project._id}/>
         })}
     </div>
   )
