@@ -67,7 +67,7 @@ const ContactForm: FC<ContactFormProps> = ({ }) => {
         <Link href={'mail:2002inderjitsingh@gmail.com'} className='flex py-2'><Mail className='mx-2' /> 2002inderjitsingh@gmail.com</Link>
       </div>
 
-      <Modal isOpen={modalOpen} onClose={closeModal} children={message}/>
+      <Modal isOpen={modalOpen} onClose={closeModal}>{message}</Modal>
     </div>
   )
 }
